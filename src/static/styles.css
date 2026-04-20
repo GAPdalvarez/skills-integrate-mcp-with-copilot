@@ -28,16 +28,36 @@ header h1 {
   margin-bottom: 10px;
 }
 
+
 main {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 30px;
   justify-content: center;
 }
 
 @media (min-width: 768px) {
   main {
-    grid-template-columns: 2fr 1fr;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 30px;
+  }
+  #signup-container {
+    order: 1;
+    max-width: 400px;
+  }
+  #activities-container {
+    order: 2;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 767px) {
+  #signup-container {
+    order: 1;
+  }
+  #activities-container {
+    order: 2;
   }
 }
 
